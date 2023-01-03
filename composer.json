@@ -1,0 +1,28 @@
+{
+  "name": "fantomiks/app",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "ext-pdo": "*"
+  },
+  "scripts": {
+    "phpcs": [
+      "@php vendor/bin/phpcs"
+    ],
+    "phpcbf": [
+      "@php vendor/bin/phpcbf"
+    ],
+    "phpstan": [
+      "@php vendor/bin/phpstan analyse app public"
+    ]
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "4.0.x-dev",
+    "phpstan/phpstan": "1.9.x-dev"
+  }
+}
